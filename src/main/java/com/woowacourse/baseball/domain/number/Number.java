@@ -1,5 +1,6 @@
 package com.woowacourse.baseball.domain.number;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -47,6 +48,6 @@ public class Number {
 		List<Digit> number = text.chars()
 				.mapToObj(Digit::of)
 				.collect(Collectors.toList());
-		return new Number(number);
+		return new Number(Collections.unmodifiableList(number));
 	}
 }
