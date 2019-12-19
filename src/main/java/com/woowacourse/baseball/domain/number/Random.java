@@ -11,16 +11,16 @@ import java.util.List;
  * @author KSKIM
  * @since 2019-12-19
  */
-public class RandomNumber {
+public class Random {
 	private final List<Digit> digits;
 
-	public RandomNumber(List<Digit> digits) {
+	public Random(List<Digit> digits) {
 		this.digits = digits;
 	}
 
-	public static RandomNumber fromDigits() {
+	public static Random fromDigits() {
 		List<Digit> digits = new ArrayList<>(Digit.values());
-		return new RandomNumber(digits);
+		return new Random(digits);
 	}
 
 	public Number next() {
