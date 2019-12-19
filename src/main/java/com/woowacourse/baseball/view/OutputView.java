@@ -8,6 +8,7 @@ import com.woowacourse.baseball.domain.ballcount.BallCount;
  * @since 2019-12-19
  */
 public class OutputView {
+	private static final String END_OF_GAME_ALERT_MESSAGE = "게임을 종료합니다.";
 	private static final String RESTART_ALERT_MESSAGE = "게임을 재시작합니다.";
 	private static final String CORRECT_ALERT_MESSAGE = "정답입니다.";
 
@@ -20,6 +21,10 @@ public class OutputView {
 
 	public static void showCorrectMessage() {
 		System.out.println(CORRECT_ALERT_MESSAGE);
+	}
+
+	public static void showEndOfGameMessage() {
+		System.out.println(END_OF_GAME_ALERT_MESSAGE);
 	}
 
 	public static void showRestartMessage() {
