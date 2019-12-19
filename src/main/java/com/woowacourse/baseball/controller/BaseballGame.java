@@ -46,10 +46,12 @@ public class BaseballGame {
 	}
 
 	private void askRestart() {
-		OutputView.showRestartMessage();
 		GameStatusSelect gameStatusSelect = InputView.getGameStatusSelect();
-		if (GameStatusSelect.RESTART.equals(gameStatusSelect)) {
+		if (GameStatusSelect.STOP.equals(gameStatusSelect)) {
+			OutputView.showEndOfGameMessage();
 			isEndOfGame = true;
+			return;
 		}
+		OutputView.showRestartMessage();
 	}
 }
