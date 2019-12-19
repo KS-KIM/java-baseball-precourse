@@ -14,7 +14,8 @@ import java.util.stream.Collectors;
 public class Number {
 	private static final String SIZE_EXCEPTION = "세 자리 숫자로 구성되어 있지 않습니다.";
 	private static final String DUPLICATE_EXCEPTION = "숫자간에 중복이 포함되어 있습니다.";
-	private static final int TOTAL_NUMBER_COUNT = 3;
+
+	public static final int TOTAL_NUMBER_COUNT = 3;
 
 	private final List<Digit> number;
 
