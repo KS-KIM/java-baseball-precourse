@@ -37,15 +37,11 @@ public class Digit {
 		}
 	}
 
-	public int get() {
-		return digit;
-	}
-
 	public static Digit of(int digit) {
 		return DIGITS.get(digit);
 	}
 
-	public List<Digit> values() {
+	public static List<Digit> values() {
 		return Collections.unmodifiableList((List <Digit>)DIGITS.values());
 	}
 
