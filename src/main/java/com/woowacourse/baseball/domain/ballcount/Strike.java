@@ -1,6 +1,6 @@
 package com.woowacourse.baseball.domain.ballcount;
 
-import static com.woowacourse.baseball.domain.number.Number.*;
+import static com.woowacourse.baseball.domain.number.BaseballNumber.*;
 
 /**
  * @version 1.0.0
@@ -28,7 +28,7 @@ public class Strike {
 		return strike > MIN_STRIKE_COUNT;
 	}
 
-	public boolean isFullCount() {
+	public boolean isMaxStrike() {
 		return strike == TOTAL_NUMBER_COUNT;
 	}
 

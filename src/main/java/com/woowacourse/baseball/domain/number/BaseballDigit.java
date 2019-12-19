@@ -12,21 +12,21 @@ import java.util.stream.IntStream;
  * @author KSKIM
  * @since 2019-12-19
  */
-public class Digit {
+public class BaseballDigit {
 	private static final String OUT_OF_RANGE_EXCEPTION = "올바르지 않은 숫자 범위입니다.";
 	private static final int MIN_DIGIT = 1;
 	private static final int MAX_DIGIT = 9;
 
-	private static final Map<Integer, Digit> DIGITS = new HashMap<>();
+	private static final Map<Integer, BaseballDigit> DIGITS = new HashMap<>();
 
 	private final int digit;
 
 	static {
 		IntStream.rangeClosed(MIN_DIGIT, MAX_DIGIT)
-				.forEach(digit -> DIGITS.put(digit, new Digit(digit)));
+				.forEach(digit -> DIGITS.put(digit, new BaseballDigit(digit)));
 	}
 
-	private Digit(int digit) {
+	private BaseballDigit(int digit) {
 		validateDigit(digit);
 		this.digit = digit;
 	}
@@ -37,12 +37,12 @@ public class Digit {
 		}
 	}
 
-	public static Digit of(int digit) {
+	public static BaseballDigit of(int digit) {
 		return DIGITS.get(digit);
 	}
 
-	public static List<Digit> values() {
-		return Collections.unmodifiableList((List <Digit>)DIGITS.values());
+	public static List<BaseballDigit> values() {
+		return Collections.unmodifiableList((List <BaseballDigit>)DIGITS.values());
 	}
 
 	@Override
@@ -56,8 +56,8 @@ public class Digit {
 			return true;
 		if (o == null || getClass() != o.getClass())
 			return false;
-		Digit digit1 = (Digit)o;
-		return digit == digit1.digit;
+		BaseballDigit baseballDigit1 = (BaseballDigit)o;
+		return digit == baseballDigit1.digit;
 	}
 
 	@Override

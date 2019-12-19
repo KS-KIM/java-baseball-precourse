@@ -1,7 +1,5 @@
 package com.woowacourse.baseball.domain.ballcount;
 
-import static com.woowacourse.baseball.domain.number.Number.*;
-
 import java.util.Objects;
 
 /**
@@ -21,6 +19,10 @@ public class BallCount {
 	public BallCount (Strike strike, Ball ball) {
 		this.strike = Objects.requireNonNull(strike);
 		this.ball = Objects.requireNonNull(ball);
+	}
+
+	public boolean isMaxStrike() {
+		return strike.isMaxStrike();
 	}
 
 	@Override
