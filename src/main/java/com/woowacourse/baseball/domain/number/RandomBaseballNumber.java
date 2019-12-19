@@ -19,7 +19,7 @@ public class RandomBaseballNumber {
 	}
 
 	public static RandomBaseballNumber fromDigits() {
-		List<BaseballDigit> baseballDigits = new ArrayList<>(BaseballDigit.values());
+		List<BaseballDigit> baseballDigits = BaseballDigit.values();
 		return new RandomBaseballNumber(baseballDigits);
 	}
 
