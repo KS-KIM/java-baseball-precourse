@@ -1,5 +1,6 @@
 package com.woowacourse.baseball.domain.number;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,7 +46,7 @@ public class Digit {
 	}
 
 	public List<Digit> values() {
-		return (List<Digit>)DIGITS.values();
+		return Collections.unmodifiableList((List <Digit>)DIGITS.values());
 	}
 
 	@Override
