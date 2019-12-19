@@ -50,6 +50,7 @@ public class BaseballNumber {
 
 	public static BaseballNumber of(String text) {
 		List<BaseballDigit> number = text.chars()
+				.map(Character::getNumericValue)
 				.mapToObj(BaseballDigit::of)
 				.collect(Collectors.toList());
 		return new BaseballNumber(Collections.unmodifiableList(number));
